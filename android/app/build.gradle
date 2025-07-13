@@ -1,0 +1,29 @@
+apply plugin: "com.android.application"
+apply plugin: "org.jetbrains.kotlin.android"
+apply plugin: "com.facebook.react"
+
+android {
+    namespace "com.apkabsensimobile" // Ganti dengan namespace unik kamu (biasanya dari `AndroidManifest.xml`)
+    compileSdkVersion 35
+
+    defaultConfig {
+        applicationId "com.apkabsensimobile"
+        minSdkVersion 24
+        targetSdkVersion 35
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+
+dependencies {
+  implementation("com.facebook.react:react-android")
+  implementation("org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion")
+}
